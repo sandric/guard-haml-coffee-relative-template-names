@@ -41,7 +41,7 @@ module Guard
       if file_dir == ''
         file_name
       else
-        File.join(file_dir, "#{File.basename(file_dir)}_#{file_name}")
+        File.join(file_dir, file_name")
       end
     end
 
@@ -55,7 +55,7 @@ module Guard
         output_file = get_output(path)
         FileUtils.mkdir_p File.dirname(output_file)
         options = [
-          basename,
+          "#{path.match(/.+\/(.+)\/.+\.js\.hamlc/)[1]}\##{basename}",
           File.read(path),
           jst = true,
           namespace = nil,
