@@ -41,7 +41,7 @@ module Guard
       if file_dir == ''
         file_name
       else
-        File.join(file_dir, file_name")
+        File.join(file_dir, file_name)
       end
     end
 
